@@ -1,0 +1,41 @@
+.header {
+    margin: .2rem;
+    border: 1px solid black;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px black;
+    background-color: #9b4f0f;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar {
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar a, 
+.logo a{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #1e434c;
+}
+
+
+.button {
+    font-weight: bold;
+    box-shadow: 0px 0px 7px black;
+    border: none;
+    border-radius: 7px;
+    color: #c99e10;
+    min-width: 5rem;
+}
+
+.button:hover {
+    background-color: #9b4f0f;
+    color: #1e434c;
+}
