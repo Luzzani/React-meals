@@ -26,6 +26,12 @@
 }
 
 
+.button-container {
+    width: 30%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+}
 .button {
     font-weight: bold;
     box-shadow: 0px 0px 7px black;
@@ -33,7 +39,25 @@
     border-radius: 7px;
     color: #c99e10;
     min-width: 5rem;
+    margin-left: 1rem;
+    background: #1e434c;
 }
+
+.badge {
+    position: relative;
+    top: -80px;
+    left: 10px;
+    background-color: #9b4f0f;
+    border-radius: 25px;
+    margin-left: 1rem;
+    font-weight: bold;
+    padding: 0 .8rem;
+  }
+  
+  .button:hover .badge,
+  .button:active .badge {
+      color: #c99e10;
+  }
 
 .button:hover {
     background-color: #9b4f0f;

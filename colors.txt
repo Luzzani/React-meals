@@ -1,8 +1,0 @@
-#8d230f crimison
-
-#1e434c forest
-
-#9b4f0f rust
-
-
-#c99e10 gold
