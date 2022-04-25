@@ -1,4 +1,4 @@
-import CartIcon from "./cart/cartWidget";
+import CartWidget from "../cart/CartWidget";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
         <button className="button">
           <span>Your Cart</span>
           <span className="icon">
-            <CartIcon />
+            <CartWidget />
           </span>
           <span className="badge">0</span>
         </button>
