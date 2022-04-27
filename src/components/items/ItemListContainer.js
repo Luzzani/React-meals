@@ -1,9 +1,12 @@
-const ItemListContainer =(props)=>{
+import ItemList from "./ItemList";
+import './ItemListContainer.css'
 
-    const { children } = props;
-
-    return <div className="text-3xl font-bold underline">{children}</div>
-
-}
+const ItemListContainer = () => {
+  return (
+    <div className="centered text-3xl font-bold underline">
+        <ItemList/>
+    </div>
+  );
+};
 
 export default ItemListContainer;

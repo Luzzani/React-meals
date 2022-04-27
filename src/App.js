@@ -1,18 +1,18 @@
 import "./App.css";
-import ItemCount from "./components/counter/ItemCount";
 import ItemListContainer from "./components/items/ItemListContainer";
 import NavBar from "./components/navbar/NavBar";
+import ItemCount from "./components/counter/ItemCount";
 
+const stock = 12;
+const initial = 5;
+ 
 function App() {
-  const stock = 12;
-  const initial = 5;
 
   return (
     <div>
       <NavBar className="App-header" />
-      <ItemListContainer>
-        <ItemCount stock={stock} initial={initial} />
-      </ItemListContainer>
+      <ItemListContainer/>
+      <ItemCount stock={stock} initial={initial} />
     </div>
   );
 }
