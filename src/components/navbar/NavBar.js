@@ -9,15 +9,15 @@ const NavBar = () => {
       </div>
       <div>
         <nav className="navbar">
-          <a href="#meat">Meat</a>
-          <a href="#chiken">Chiken</a>
-          <a href="#vegan">Vegan</a>
+          <a href="#Cloth">Clothing</a>
+          <a href="#Jewels">Jewels</a>
+          <a href="#Tech">Technology</a>
         </nav>
       </div>
       <div className="button-container">
         <button className="button">Login</button>
-        <button className="button">
-          <span>Your Cart</span>
+        <button>
+          <span className="titleCart">Your Cart</span>
           <span className="icon">
             <CartWidget />
           </span>

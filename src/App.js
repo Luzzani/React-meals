@@ -1,20 +1,18 @@
 import "./App.css";
-import ItemListContainer from "./components/items/ItemListContainer";
-import NavBar from "./components/navbar/NavBar";
-import ItemCount from "./components/counter/ItemCount";
 
-const stock = 12;
-const initial = 5;
- 
+import NavBar from "./components/navbar/NavBar";
+import ItemDetailContainer from "./components/items/ItemDetailContainer";
+
+
 function App() {
 
   return (
     <div>
       <NavBar className="App-header" />
-      <ItemListContainer/>
-      <ItemCount stock={stock} initial={initial} />
+      <ItemDetailContainer/>
     </div>
   );
 }
 
 export default App;
+
