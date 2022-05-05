@@ -20,6 +20,7 @@ const Count =(props)=>{
     }
 
     return <>
+        <div>Bienvenido</div>
         <div>Count</div>
         <button onClick={lessCount}>-</button>
         <strong>{count}</strong>

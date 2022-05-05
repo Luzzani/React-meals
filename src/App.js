@@ -18,10 +18,7 @@ function App() {
         <Route path="/" element={<Count initial={initial} stock={stock}/>}/>
         <Route path="/ItemList" element={<ItemLitContainer/>}></Route>
         <Route path='/ItemList/:itemId' element={<ItemDetailContainer/>}/>
-        <Route></Route>s
        {/* <Count initial={initial} stock={stock}/> */}
-       
-       
       </Routes>
     </BrowserRouter>
   );
