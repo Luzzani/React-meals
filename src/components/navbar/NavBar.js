@@ -3,6 +3,7 @@ import CartWidget from "../cart/CartWidget";
 import "./NavBar.css";
 
 const NavBar = () => {
+
   return (
     <header className="header">
       <div className="logo">
@@ -10,9 +11,10 @@ const NavBar = () => {
       </div>
       <div>
         <nav className="navbar">
-          <Link to={'/ItemList'} href="#Cloth">Clothing</Link>
-          <Link to={'/ItemList'} href="#Jewels">Jewels</Link>
-          <Link to={'/ItemList'} href="#Tech">Technology</Link>
+          <Link to={`/ItemList/weomensCloth`}>Women's Clothing</Link>
+          <Link to={"/ItemList/MensCloth"}>Men's Clothing</Link>
+          <Link to={"/ItemList/Jewels"}>Jewels</Link>
+          <Link to={"/ItemList/Electronics"}>Electronics</Link>
         </nav>
       </div>
       <div className="button-container">

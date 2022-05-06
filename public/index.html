@@ -39,5 +39,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+        function openDrawerMenu(){
+         var x = document.getElementById("mainNavBar");
+         if (x.className === "navBar"){
+              x.className += " responsive";
+         } else {
+              x.className = "navBar";
+          }
+        }
+    </script>
   </body>
 </html>
