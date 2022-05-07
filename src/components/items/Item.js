@@ -11,7 +11,7 @@ const Item =(props)=>{
         <div className="itemBox">
         <h2 className="titleItem">{item.title}</h2>
         <img src={`${item.image}`} alt={props.title} height="80" width="80" />
-        <h4 className="priceItem">{item.price}</h4>
+        <h4 className="priceItem">{`$${item.price}`}</h4>
         <Link to={`/ItemDetail/${item.id}`} className="btnItem">Details</Link>
         </div>
     </Fragment>
