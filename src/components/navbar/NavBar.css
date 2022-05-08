@@ -11,7 +11,6 @@
 }
 
 .navbar {
-    
     position: relative;
     left: 10rem;
     width: 34vw;
@@ -30,8 +29,18 @@
 }
 
 .button-container {
+    color: #ecdeb1;
+    margin-top: 6vh;
     width: 20%;
     height: 10vh;
+}
+
+.icon {
+    position: relative;
+    z-index: 10;
+    left: 120px;
+    top: -25px;
+    cursor: auto;
 }
 
 .button {
@@ -40,16 +49,18 @@
     border-radius: 7px;
     color: #ecdeb1;
     min-width: 5rem;
-    margin-left: 5rem;
+    margin-right: 3rem;
     background: #000000;
 }
 
 .titleCart {
+    position: relative;
+    z-index: 999;
     color: #ecdeb1;
     background: #000000;
     border-radius: 7px;
     box-shadow: 0px 0px 7px black;
-    margin-left: 2rem;
+    margin-left: 2.5rem;
     font-size: 1.2rem;
     width: 100px;
     height: 30px;
@@ -57,7 +68,9 @@
 
 .badge {
     position: relative;
-    right: 10px;
+    z-index: 1;
+    top: -155px;
+    left: 78px;
     color: #ecdeb1;
     box-shadow: 0px 0px 7px black;
     border: 1px solid black;

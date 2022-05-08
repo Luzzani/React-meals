@@ -1,22 +1,37 @@
-import "./ItemDetail.css";
+import { useState } from "react";
+import Count from "../count/count";
+import classes from "./ItemDetail.module.css";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (props) => {
+  const [hideCount, sethideCount] =useState(false);
+
+  const initial = 1;
+  let stock = 5;
+
+  const buyButtonHandler =()=>{
+    sethideCount(true);
+  }
+
   return (
-    <div className="wrapper">
-      <div className="product-img">
-        <img src={`${props.img}`} alt={props.name} height="320" width="227" />
+    <div className={classes.wrapper}>
+      <div className={classes.productImg}>
+        <img className={classes.imgDetail} src={`${props.img}`} alt={props.name} height="320" width="227" />
       </div>
-      <div className="product-info">
-        <div className="product-text">
-          <h1>{props.name}</h1>
-          <h2>{props.description}</h2>
+      <div className={classes.productInfo}>
+        <div className={classes.productText}>
+          <h1 className={classes.titleDetail}>{props.name}</h1>
+          <h2 className={classes.subTitleDetail}>{props.description}</h2>
         </div>
       </div>
-      <div className="product-price-btn">
-        <p>
-          <span>{props.price}</span>$
+      <div className={classes.productPriceBtn}>
+        <p className={classes.priceDetail}>
+          <span className={classes.spanDetail}>${props.price}</span>
         </p>
-        <button type="button">buy now</button>
+
+        {!hideCount && <Count className={classes.countDetial} initial={initial} stock={stock} onAdd={buyButtonHandler}/>}
+
+        {hideCount && <Link to="/cart" className={classes.btnDetail}>Terminar Compra</Link>}
       </div>
     </div>
   );
