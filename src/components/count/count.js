@@ -11,9 +11,6 @@ const Count = (props) => {
   const { addToCart } = useCartContext();
   const { products } = useAppContext();
 
-  console.log("count" + products);
-  console.log(products);
-
   const addCount = () => {
     let hasStock = stock - count;
     if (hasStock > 0) {
@@ -28,13 +25,11 @@ const Count = (props) => {
   };
 
   const handlerClick =(id, quantity)=>{
-    console.log("en handlerclick" + id, quantity, products);
     const findProduct = products.find((prod) => prod.id === id)
 
     if (!findProduct) {
       alert("Error en la base de datos")
     }
-    console.log(findProduct);
     addToCart(findProduct, quantity)
     onAdd(count)
   }

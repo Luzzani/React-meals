@@ -44,6 +44,8 @@ const CartContextProvider =(porps)=>{
 
     const deletCart =()=> setCart([]);
 
+    console.log(cart);
+
     return <CartContext.Provider value={{
         cart,
         addToCart,
