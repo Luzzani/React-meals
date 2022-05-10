@@ -45,6 +45,7 @@ const ItemDetailContainer = () => {
             name={data.title}
             img={data.image}
             description={data.description}
+            id={data.id}
           />
       }
     </ul>

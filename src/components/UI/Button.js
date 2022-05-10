@@ -1,3 +1,4 @@
+// proceso de futuro boton para reutilizar
 const Button = (props) => {
   return <button
             type={props.type || "button"}

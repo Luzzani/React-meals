@@ -1,10 +1,18 @@
 import { useState } from "react";
-import classes from "./Count.module.css"
+import { useAppContext } from "../context/AppContext";
+import { useCartContext } from "../context/CartContext";
+import classes from "./Count.module.css";
 
 const Count = (props) => {
-  const { initial, stock, onAdd} = props;
+  const { initial, stock, onAdd, id } = props;
 
   const [count, setCount] = useState(initial);
+
+  const { addToCart } = useCartContext();
+  const { products } = useAppContext();
+
+  console.log("count" + products);
+  console.log(products);
 
   const addCount = () => {
     let hasStock = stock - count;
@@ -19,16 +27,30 @@ const Count = (props) => {
     }
   };
 
+  const handlerClick =(id, quantity)=>{
+    console.log("en handlerclick" + id, quantity, products);
+    const findProduct = products.find((prod) => prod.id === id)
+
+    if (!findProduct) {
+      alert("Error en la base de datos")
+    }
+    console.log(findProduct);
+    addToCart(findProduct, quantity)
+    onAdd(count)
+  }
+
   return (
     <>
-    <div className={props.className}>
-      <button onClick={lessCount}>-</button>
-      <strong>{count}</strong>
-      <button onClick={addCount}>+</button>
-    </div>
-    <div>
-      <button className={classes.buyBtn} type="button" onClick={onAdd}>Add to cart</button>
-    </div>
+      <div className={props.className}>
+        <button onClick={lessCount}>-</button>
+        <strong>{count}</strong>
+        <button onClick={addCount}>+</button>
+      </div>
+      <div>
+        <button className={classes.buyBtn} type="button" onClick={() => handlerClick(id, count)}>
+          Add to cart
+        </button>
+      </div>
     </>
   );
 };

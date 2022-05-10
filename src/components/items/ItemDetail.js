@@ -29,9 +29,9 @@ const ItemDetail = (props) => {
           <span className={classes.spanDetail}>${props.price}</span>
         </p>
 
-        {!hideCount && <Count className={classes.countDetial} initial={initial} stock={stock} onAdd={buyButtonHandler}/>}
+        {!hideCount && <Count className={classes.countDetial} initial={initial} stock={stock} onAdd={buyButtonHandler} id={props.id}/>}
 
-        {hideCount && <Link to="/cart" className={classes.btnDetail}>Terminar Compra</Link>}
+        {hideCount && <Link to="/cart" className={classes.btnDetail}>checkout</Link>}
       </div>
     </div>
   );

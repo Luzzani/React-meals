@@ -27,7 +27,7 @@ const ItemList = () => {
       .then((response) => response.json())
       .then((data) => {
         setData(data);
-      });
+      })
   };
 
   let content = data.map((item) => <Item key={item.id} item={item} />);
