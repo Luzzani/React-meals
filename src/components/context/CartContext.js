@@ -14,24 +14,34 @@ const CartContextProvider =(porps)=>{
         const newCart = [...cart];
         
         const productIsInCart = isInCart(product.id)
-
+        
         
         if (productIsInCart) {
-            newCart[newCart.findIndex(prod => prod.id === productIsInCart.id)].quiantity += quant;
+            newCart[newCart.findIndex(prod => prod.id === productIsInCart.id)].quantity += quant;
             
             setCart(newCart);
             return;
         }
         
-        product.quiantity = quant;
+        product.quantity = quant;
         
         setCart([...newCart, product])
     }
     
-    const deteleFromCart =(product)=> {
+    const deleteFromCart =(product, quant)=> {
         const newCart = [...cart];
         
         const productIsInCart = isInCart(product.id);
+
+        //const total = productIsInCart.price * productIsInCart.quant
+
+
+        if (productIsInCart && (productIsInCart.quantity > 1)) {
+            newCart[newCart.findIndex(prod => prod.id === productIsInCart.id)].quantity -= quant;
+            //newCart[newCart.findIndex(prod => prod.id === productIsInCart.id)].total = total;
+            setCart(newCart);
+            return;
+        }
 
         if (!productIsInCart) {
             return;
@@ -49,7 +59,7 @@ const CartContextProvider =(porps)=>{
     return <CartContext.Provider value={{
         cart,
         addToCart,
-        deteleFromCart,
+        deleteFromCart,
         setCart,
         deletCart
     }}>{porps.children}</CartContext.Provider>
@@ -57,3 +67,5 @@ const CartContextProvider =(porps)=>{
 }
 
 export default CartContextProvider;
+
+

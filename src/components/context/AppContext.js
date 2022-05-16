@@ -4,8 +4,6 @@ const AppContext = createContext();
 
 export const useAppContext =()=> useContext(AppContext)
 
-
-
 const AppContextProvider =(props)=>{
     const [products, setProducts] = useState([])
 

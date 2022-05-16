@@ -7,6 +7,8 @@ import ItemLitContainer from "./components/items/ItemListContainer";
 import "./App.css";
 import CartContextProvider from "./components/context/CartContext";
 import AppContextProvider from "./components/context/AppContext";
+import Cart from "./components/cart/Cart";
+import HeroImage from "./components/UI/HeroImage";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
         <BrowserRouter>
           <NavBar className="App-header" />
           <Routes>
-            <Route path="/" element={<ItemLitContainer />} />
+            <Route path="/" element={<HeroImage />}/>
+            <Route path="/ItemsList" element={<ItemLitContainer />} />
             <Route
               path="/ItemList/:categoryId"
               element={<ItemLitContainer />}
@@ -24,6 +27,10 @@ function App() {
               path="/ItemDetail/:itemId"
               element={<ItemDetailContainer />}
             />
+          <Route 
+            path="/Cart"
+            element={<Cart />}
+          />
           </Routes>
         </BrowserRouter>
       </CartContextProvider>
@@ -32,3 +39,4 @@ function App() {
 }
 
 export default App;
+

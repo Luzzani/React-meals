@@ -8,7 +8,7 @@ import "./ItemList.css";
 
 const ItemList = () => {
   const { categoryId } = useParams();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -30,29 +30,30 @@ const ItemList = () => {
       })
   };
 
+  const filter =(data, category)=> {
+    const filter = data.filter(
+      (item) => item.category === `${category}`
+    );
+    content = filter.map((item) => <Item key={item.id} item={item} />);
+  }
+
   let content = data.map((item) => <Item key={item.id} item={item} />);
 
   switch (categoryId) {
     case "weomensCloth": {
-      const filter = data.filter(
-        (item) => item.category === `women's clothing`
-      );
-      content = filter.map((item) => <Item key={item.id} item={item} />);
+      filter(data, `women's clothing`);
       break;
     }
     case "MensCloth": {
-      const filter = data.filter((item) => item.category === `men's clothing`);
-      content = filter.map((item) => <Item key={item.id} item={item} />);
+      filter(data, `men's clothing`);
       break;
     }
     case "Jewels": {
-      const filter = data.filter((item) => item.category === `jewelery`);
-      content = filter.map((item) => <Item key={item.id} item={item} />);
+      filter(data, `jewelery`);
       break;
     }
     case "Electronics": {
-      const filter = data.filter((item) => item.category === `electronics`);
-      content = filter.map((item) => <Item key={item.id} item={item} />);
+      filter(data, `electronics`);
       break;
     }
     default:

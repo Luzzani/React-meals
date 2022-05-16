@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useAppContext } from "../context/AppContext";
 import { useCartContext } from "../context/CartContext";
+
+import Button from "../UI/Button";
 import classes from "./Count.module.css";
 
 const Count = (props) => {
@@ -30,6 +32,8 @@ const Count = (props) => {
     if (!findProduct) {
       alert("Error en la base de datos")
     }
+    const total = findProduct.price * quantity
+    findProduct.total = total;
     addToCart(findProduct, quantity)
     onAdd(count)
   }
@@ -42,9 +46,9 @@ const Count = (props) => {
         <button onClick={addCount}>+</button>
       </div>
       <div>
-        <button className={classes.buyBtn} type="button" onClick={() => handlerClick(id, count)}>
+        <Button className={classes.buyBtn} type="button" onEventClick={() => handlerClick(id, count)}>
           Add to cart
-        </button>
+        </Button>
       </div>
     </>
   );

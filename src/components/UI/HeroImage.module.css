@@ -1,0 +1,13 @@
+.heroimage {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    background-image: url(../../../public/pin_12.jpg);
+    background-size: contain;
+}
+
+.buttonHome {
+    position: relative;
+    top: 42vh;
+    left: 20vw;
+}

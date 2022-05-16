@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 const ItemLitContainer = () => {
   return (
     <div>
-        <ItemList/>
+      <ItemList />
     </div>
   );
 };

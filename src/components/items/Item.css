@@ -1,4 +1,5 @@
 .itemBox {
+    box-shadow: 0px 0px 20px 5px black;
     border-radius: 20px;
     text-align: center;
     height: 350px;
@@ -9,11 +10,14 @@
     justify-content: space-between;
     border: 2px solid black;
     margin: .5rem;
+    margin-top: 5rem;
     padding: .4rem;
+    background-color: #fff;
 }
 
 .btnItem {
+    position: relative;
+    left: 0;
     padding: .2rem;
     border-radius: 7px;
-    background-color: #efdfa0;
 }
