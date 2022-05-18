@@ -5,8 +5,8 @@ import ItemDetailContainer from "./components/items/ItemDetailContainer";
 import ItemLitContainer from "./components/items/ItemListContainer";
 
 import "./App.css";
-import CartContextProvider from "./components/context/CartContext";
-import AppContextProvider from "./components/context/AppContext";
+import CartContextProvider from "./context/CartContext";
+import AppContextProvider from "./context/AppContext";
 import Cart from "./components/cart/Cart";
 import HeroImage from "./components/UI/HeroImage";
 

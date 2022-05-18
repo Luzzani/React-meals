@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useAppContext } from "../context/AppContext";
-import { useCartContext } from "../context/CartContext";
+import { useAppContext } from "../../context/AppContext";
+import { useCartContext } from "../../context/CartContext";
 
 import Button from "../UI/Button";
 import classes from "./Count.module.css";
@@ -12,6 +12,7 @@ const Count = (props) => {
 
   const { addToCart } = useCartContext();
   const { products } = useAppContext();
+  console.log(products);
 
   const addCount = () => {
     let hasStock = stock - count;

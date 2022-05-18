@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import CartButton from "../cart/CartButton";
-import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
 import "./NavBar.css";
 
 const NavBar = () => {

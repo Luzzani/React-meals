@@ -2,35 +2,26 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import ItemDetail from "./ItemDetail";
+import { useAppContext } from '../../context/AppContext'
 
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
+  const { products } = useAppContext()
   const {itemId} = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState({});
-  
-  useEffect(() => {
-    setTimeout(() => {
-      getData();
-    }, 2000);
-    setIsLoading(false);
-  }, []);
-  
-  
-    const getData = () => {
-      
-      const URL = "https://fakestoreapi.com/products";
-      
-      fetch(URL)
-      .then((response) => response.json())
-      .then((data) => {
-        const product = data.find(prod => prod.id === +itemId)
-        setIsLoading(true);
-        setData(product)
-      });
-    };
 
+
+  useEffect(() => {
+    setIsLoading(false);
+    console.log(products);
+    const product = products.find(prod => prod.id === +itemId)
+    setData(product)
+    setIsLoading(true);
+  }, [itemId, products]);
+  
+  
   return (
     <ul className="listItem">
       {!isLoading && (

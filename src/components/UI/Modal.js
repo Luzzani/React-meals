@@ -5,7 +5,7 @@ import classes from "./Modal.module.css";
 const Modal = (props) => {
   return (
     <div>
-      <div className={classes.backdrop}></div>
+      <Link to='/'><div className={classes.backdrop}></div></Link>
       <Card className={`${classes.modal} ${classes["invisible-scrollbar"]}`}>
         <Link to='/'><span className={classes.exit}>X</span></Link>
         {props.children}

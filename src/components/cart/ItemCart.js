@@ -1,10 +1,10 @@
-import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
 
 import classes from "./ItemCart.module.css";
 
 const ItemCart = (props) => {
   const { cart, addToCart, deleteFromCart } = useCartContext();
-  const { title, price, quantity, id, total } = props.item;
+  const { title, price, quantity, id } = props.item;
 
   const addItemHandler = (id, quantity) => {
     const findProduct = cart.find((prod) => prod.id === id);
@@ -12,11 +12,12 @@ const ItemCart = (props) => {
       alert("Error");
       return;
     }
-
+    
     findProduct.total += findProduct.price;
 
     addToCart(findProduct, quantity);
   };
+
   const removeItemHandler = (product, quantity) => {
     const findProduct = cart.find((prod) => prod.id === product.id);
 

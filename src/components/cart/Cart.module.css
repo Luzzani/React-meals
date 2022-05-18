@@ -4,6 +4,9 @@
   padding: 0.25rem 0.75rem;
   border-radius: 6px;
   color: #fff;
+  position: relative;
+  left: 200px;
+  margin: 0 1rem;
 }
 .amount {
   color: #000;

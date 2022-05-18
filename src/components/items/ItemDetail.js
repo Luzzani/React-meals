@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import Count from "../utils/count";
 import classes from "./ItemDetail.module.css";
-import { Link } from "react-router-dom";
 import Button from "../UI/Button";
 
 const ItemDetail = (props) => {
@@ -47,11 +48,9 @@ const ItemDetail = (props) => {
         )}
 
         {hideCount && (
-          <Link to="/cart" >
-              <Button className={classes.btnDetail}>
-              checkout
-          </Button>
-            </Link>
+          <Link to="/cart">
+            <Button className={classes.btnDetail}>checkout</Button>
+          </Link>
         )}
       </div>
     </div>
