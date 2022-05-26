@@ -2,6 +2,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
+import Button from "../UI/Button";
 
 import classes from "./FormCart.module.css";
 
@@ -47,9 +48,9 @@ const FormCart = () => {
     const formIsValid =
       enteredEmailIsValid && enteredNameIsValid && enteredPhoneIsValid;
 
-      if (!formIsValid) {
-          return;
-      }
+    if (!formIsValid) {
+      return;
+    }
 
     const user = { name: nameInput, phone: phoneInput, email: emailInput };
 
@@ -77,15 +78,27 @@ const FormCart = () => {
         setId(response.id);
       }
       setIdBuyer(true);
-      deletCart()
+      deletCart();
     });
   };
 
   return (
     <div>
-      {idBuyer && <h2 className={classes.buyerId}>{`Your buyer id: ${id}`}</h2>}
+      {idBuyer && (
+        <div>
+          <h2 className={classes.buyerId}>{`Your buyer id: ${id}`}</h2>
+          <Link to='/'><Button>Ok</Button></Link>
+        </div>
+      )}
       {!idBuyer && (
         <form className={classes.form} onSubmit={submitBuyHandler}>
+          <div className={classes.decoCart}></div>
+          <div
+            className={`${classes.decoCartbottom} ${classes.decoCart}`}
+          ></div>
+          <div
+            className={`${classes.decoCartMiddle} ${classes.decoCart}`}
+          ></div>
           <div
             className={`${classes.control} ${
               formInputsValidity.name ? "" : classes.invalid
@@ -116,9 +129,9 @@ const FormCart = () => {
             )}
           </div>
           <div className={classes.actions}>
-            <Link to='/'><button type="button">
-              Cancel
-            </button></Link>
+            <Link to="/">
+              <button type="button">Cancel</button>
+            </Link>
             <button className={classes.submit}>Confirm</button>
           </div>
         </form>

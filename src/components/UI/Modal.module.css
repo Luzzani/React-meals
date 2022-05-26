@@ -11,6 +11,8 @@
 }
 
 .modal {
+    width: auto;
+    height: auto;
     position: fixed;
     top: 30vh;
     left: 10%;

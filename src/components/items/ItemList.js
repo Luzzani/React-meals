@@ -20,7 +20,7 @@ const ItemList = () => {
   let content = products.map((item) => <Item key={item.id} item={item} />);
 
   switch (categoryId) {
-    case "weomensCloth": {
+    case "womensCloth": {
       filter(products, `women's clothing`);
       break;
     }

@@ -12,7 +12,6 @@ import FormCart from "./FormCart";
 const Cart = () => {
   const [isFinish, setIsFinish] = useState(false);
   const { cart, deletCart } = useCartContext();
-  console.log(cart);
 
   const hasCart = cart.length > 0;
 
@@ -21,13 +20,11 @@ const Cart = () => {
   cart.map((item) => (totalCart += item.total));
 
   const finishBuyHandler = () => {
-    console.log(isFinish);
     setIsFinish(true);
   };
   const cleanBuyHandler =()=>{
     deletCart();
   }
-  console.log(isFinish);
   return (
     <Modal>
       {!isFinish && (

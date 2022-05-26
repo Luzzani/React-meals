@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import CartButton from "../cart/CartButton";
 import { useCartContext } from "../../context/CartContext";
 import "./NavBar.css";
@@ -18,10 +18,10 @@ const NavBar = () => {
       </div>
       <div>
         <nav className="navbar">
-          <Link to={`/ItemList/weomensCloth`}>Women's Clothing</Link>
-          <Link to={"/ItemList/MensCloth"}>Men's Clothing</Link>
-          <Link to={"/ItemList/Jewels"}>Jewels</Link>
-          <Link to={"/ItemList/Electronics"}>Electronics</Link>
+          <NavLink activeClassName='active' to={`/ItemList/womensCloth`}>Women's Clothing</NavLink>
+          <NavLink activeClassName='active' to={"/ItemList/MensCloth"}>Men's Clothing</NavLink>
+          <NavLink activeClassName='active' to={"/ItemList/Jewels"}>Jewels</NavLink>
+          <NavLink activeClassName='active' to={"/ItemList/Electronics"}>Electronics</NavLink>
         </nav>
       </div>
       {hasCart && <CartButton totalInCart={totalInCart} />}

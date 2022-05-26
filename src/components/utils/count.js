@@ -12,7 +12,6 @@ const Count = (props) => {
 
   const { addToCart } = useCartContext();
   const { products } = useAppContext();
-  console.log(products);
 
   const addCount = () => {
     let hasStock = stock - count;

@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setIsLoading(false);
-    console.log(products);
     const product = products.find(prod => prod.id === +itemId)
     setData(product)
     setIsLoading(true);

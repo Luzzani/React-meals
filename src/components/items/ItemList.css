@@ -1,10 +1,12 @@
 .containerItem {
+    position: relative;
     width: 60vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+    top: 10vh;
 }
 
 @media (max-width: 1250px) {

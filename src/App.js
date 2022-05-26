@@ -17,8 +17,8 @@ function App() {
         <BrowserRouter>
           <NavBar className="App-header" />
           <Routes>
-            <Route path="/" element={<HeroImage />}/>
-            <Route path="/ItemsList" element={<ItemLitContainer />} />
+            <Route path="/" element={<HeroImage />} />
+            <Route path="/ItemList" element={<ItemLitContainer />} />
             <Route
               path="/ItemList/:categoryId"
               element={<ItemLitContainer />}
@@ -27,10 +27,7 @@ function App() {
               path="/ItemDetail/:itemId"
               element={<ItemDetailContainer />}
             />
-          <Route 
-            path="/Cart"
-            element={<Cart />}
-          />
+            <Route path="/Cart" element={<Cart />} />
           </Routes>
         </BrowserRouter>
       </CartContextProvider>
@@ -39,4 +36,3 @@ function App() {
 }
 
 export default App;
-
