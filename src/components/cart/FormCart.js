@@ -87,7 +87,7 @@ const FormCart = () => {
       {idBuyer && (
         <div>
           <h2 className={classes.buyerId}>{`Your buyer id: ${id}`}</h2>
-          <Link to='/'><Button>Ok</Button></Link>
+          <Link to='/'><Button className={classes.buuyerIdBtn}>Ok</Button></Link>
         </div>
       )}
       {!idBuyer && (

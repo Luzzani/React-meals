@@ -48,9 +48,18 @@ const ItemDetail = (props) => {
         )}
 
         {hideCount && (
-          <Link to="/cart">
-            <Button className={classes.btnDetail}>checkout</Button>
-          </Link>
+          <div className={classes.containerButton}>
+          <div className={classes.chekoutButton}>
+            <Link to="/cart">
+              <Button className={classes.btnDetail}>checkout</Button>
+            </Link>
+          </div>
+          <div className={classes.keepButton}>
+            <Link to="/">
+              <Button className={classes.btnDetail}>keep buying</Button>
+            </Link>
+          </div>
+          </div>
         )}
       </div>
     </div>

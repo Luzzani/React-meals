@@ -22,9 +22,9 @@ const Cart = () => {
   const finishBuyHandler = () => {
     setIsFinish(true);
   };
-  const cleanBuyHandler =()=>{
+  const cleanBuyHandler = () => {
     deletCart();
-  }
+  };
   return (
     <Modal>
       {!isFinish && (
@@ -44,9 +44,12 @@ const Cart = () => {
             {totalCart.toFixed(2)}
           </span>
           {!hasCart && (
-            <Button className={classes.btnCart}>
-              <Link to="/">Back</Link>
-            </Button>
+            <>
+              <h2>The cart is empty</h2>
+              <Button className={classes.btnCart}>
+                <Link to="/">Back</Link>
+              </Button>
+            </>
           )}
           {hasCart && (
             <>

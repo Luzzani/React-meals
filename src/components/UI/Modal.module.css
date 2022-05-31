@@ -13,10 +13,11 @@
 .modal {
     width: auto;
     height: auto;
+    min-height: 200px;
+    min-width: 500px;
     position: fixed;
-    top: 30vh;
-    left: 10%;
-    width: 80%;
+    top: 20vh;
+    left: 32.5%;
     z-index: 100;
     overflow-y:scroll ;
     animation-duration: 1s;
@@ -42,30 +43,39 @@
   }
 }
 
-@media (min-width: 768px) {
-    .modal {
-      left: calc(50% - 20rem);
-      width: 40rem;
-    }
-  }
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
-  .invisible-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+.exit {
+  position: relative;
+  left: 0;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4f005f;
+  transition: padding ease .2s;
+}
 
+.exit:hover {
+  padding: .2rem 1.2rem;
+
+}
+
+
+@media only screen and (max-width: 1025px) {
+  .modal {
+    left: 17%;
+  }
+}
+@media only screen and (max-width: 775px) {
   .exit {
-    position: relative;
-    left: 530px;
-    padding: 0 1rem;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    color: #fff;
-    background-color: #4f005f;
-    transition: padding ease .2s;
+    left: 0;
+  }  
+  .modal {
+    left: 0;
+    width: 100%;
   }
-  
-  .exit:hover {
-    padding: .2rem 1.2rem;
-
-  }
+}
