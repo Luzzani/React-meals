@@ -1,3 +1,10 @@
+
+# Esta app es una tienda de ropa y electrodomesticos, adaptada a mobile y pc. Se puede realizar una compra que devuelve un ID unico por compra.
+
+ Para probar la app puede acceder a la misma desde este link  [My app](https://react-meals-tawny.vercel.app/).
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
