@@ -1,7 +1,7 @@
 
 # Esta app es una tienda de ropa y electrodomesticos, adaptada a mobile y pc. Se puede realizar una compra que devuelve un ID unico por compra.
 
- Para probar la app puede acceder a la misma desde este link  [My app](https://react-meals-tawny.vercel.app/).
+ Para probar la app puede acceder a la misma desde este link  [My app](https://platiniumend.vercel.app/).
 
 
 
